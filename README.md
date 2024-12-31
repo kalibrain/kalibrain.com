@@ -15,9 +15,9 @@ sass --watch scss/main.scss:css/style.min.css --style compressed
 
 Scripts
 ````
-terser js/photos.js js/map.js js/bucket.js js/script.js --source-map -m -o js/script.terser.js
+terser js/bucket.js js/script.js --source-map -m -o js/script.terser.js
 
-chokidar js/*.js -c "terser js/photos.js js/bucket.js js/script.js --source-map -m -o js/script.terser.js"
+chokidar js/*.js -c "terser js/bucket.js js/script.js --source-map -m -o js/script.terser.js"
 ````
 
 ---
