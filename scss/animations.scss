@@ -1,0 +1,217 @@
+// delay utility classes
+@include delays(50, 50, 2);
+@include delays(100, 1000, 35);
+
+// Transition IN animations
+.slide-in-up {
+	animation: slide-in-up .5s $ease-in-out-cubic both;
+}
+
+@keyframes slide-in-up {
+	from {
+		transform: translateY(100vh);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+.wipe-in-right {
+	animation: wipe-in-right .5s $ease-in-out-cubic both;
+}
+
+@keyframes wipe-in-right {
+	from {
+		transform:scaleX(0);
+	}
+	to {
+		transform:scaleX(1);
+	}
+}
+
+.wipe-in-up {
+	animation: wipe-in-up 1s cubic-bezier(.33, 1, .68, 1) both;
+	animation-delay: .5s;
+}
+
+@keyframes wipe-in-up { 
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(10%);
+	}
+}
+
+.fade-in {
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: $ease-in-out-cubic;
+	animation-fill-mode: both;
+	// @include delays(500, 1000, 1);
+	// @include delays(100, 2500, 18);
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-in-left {
+	animation-name: fade-in-left;
+	animation-duration: 1s;
+	animation-timing-function: $ease-in-out-cubic;
+	animation-fill-mode: both;
+	// @include delays(50, 50, 2);
+	// @include delays(100, 1500, 17);
+}
+
+@keyframes fade-in-left {
+	from {
+		transform: translateX(40vw);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.fade-in-right {
+	animation-name: fade-in-right;
+	animation-duration: 1s;
+	animation-timing-function: $ease-in-out-cubic;
+	animation-fill-mode: both;
+	// @include delays(100, 1500, 15);
+}
+
+@keyframes fade-in-right {
+	from {
+		transform: translateX(-40vw);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+// Transition OUT animations
+
+.slide-out-bottom {
+	animation: slide-out-bottom .5s $ease-in-out-cubic both;
+}
+
+@keyframes slide-out-bottom {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(100vh);
+	}
+}
+
+.fade-out-bottom {
+	animation: fade-out-bottom .5s $ease-in-out-cubic both;
+}
+
+@keyframes fade-out-bottom { 
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		transform: translateY(100vh);
+	}
+}
+
+.fade-out-right {
+	animation: fade-out-right .5s $ease-in-out-cubic both;
+}
+
+@keyframes fade-out-right { 
+	from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		transform: translateX(50vh);
+	}
+}
+
+// In place animations
+@keyframes loading {
+	0%, 100% {
+		height: 0;
+		margin-top: 35px;
+	}
+	50% {
+		height: 35px;
+		margin-top: 0;
+	}
+}
+
+.spin {
+	animation: spin 1s $ease-in-out-cubic forwards;
+	animation-iteration-count: 1;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.fade-down-twice {
+	animation-name: fade-down-twice;
+	animation-duration: 1s;
+	animation-timing-function: $ease-in-out-cubic;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 3;
+}
+
+@keyframes fade-down-twice {
+	0% {
+		transform: translateY(-1em) rotate(180deg);
+		opacity: 0;
+	}
+	20%, 80% {
+		opacity: .8;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(0) rotate(180deg);
+	}
+}
+.wiggle:hover {
+	animation: wiggle .82s linear;
+	animation-iteration-count: infinite;
+}
+@keyframes wiggle {
+	0%, 100% {
+		transform: translateX(0px);
+	}
+	10%, 90% {
+		transform: translateX(-2px);	
+	}
+	20%, 80% {
+		transform: translateX(2px);
+	}
+
+	30%, 50%, 70% {
+		transform: translateX(-4px);
+	}
+
+	40%, 60% {
+		transform: translateX(4px);
+	}
+}

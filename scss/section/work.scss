@@ -1,0 +1,182 @@
+#id-work {
+	.work-title {
+		font-size: .8em;
+		letter-spacing: 2px;
+		margin: 2.5em 0 .5em;
+		color: #777;
+		text-transform: uppercase;
+	}
+	.work {
+		cursor: pointer;
+		padding: .25em .5em;
+		margin: .75em 0;
+		border-left: 4px solid transparent;
+		transition: border-color .5s ease-in-out;
+
+		.work-name {
+			font-size: 1.1em;
+			font-weight: 600;
+			font-family: var(--title-font);
+		}
+		.subtitle {
+			font-size: .9em;
+		}
+		&:hover {
+			border-color: #ddd;
+		}
+		&:active, &.active {
+			border-color: $c-1;
+		}
+	}
+	.arrow {
+		display: block;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		span {
+			position: absolute;
+			font-size: 2em;
+			bottom: .25em;
+			right: .5em;
+			opacity: 0;
+			&:last-of-type {
+				bottom: .5em;
+			}
+		}
+		@media screen and (min-width: 40em) {
+			display: none;
+		}
+	}
+	.card {
+		max-width: 30em;
+		margin: 1em auto 0;
+		display: block;
+		padding: 1.5em;
+
+		&.hidden {
+			display: none;
+		}
+		.heading {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.logo {
+				img {
+					width: 8em;
+					height: 8em;
+					border-radius: 4em;
+					background: $c-w;
+				}
+				&.section-bg img {
+					background: $c-1;	
+				}
+				&.square img {
+					border-radius: .3em;
+				}
+				padding-right: 1em;
+				@media screen and (max-width: 40em) {
+					padding-right: 0;
+				}
+			}
+			.company, .position, .dates {
+				line-break: normal;
+			}
+			.company {
+				font-size: 1.2em;
+				font-family: var(--title-font);
+				font-weight: 700;
+			}
+			.position {
+				color: #777;
+			}
+			.dates {
+				padding-top: .25em;
+				font-weight: 350;
+				color: #AAA;
+			}
+		}
+		.blurb {
+			margin: 2em 0 0;
+			font-size: .95em;
+			.subheading {
+				font-size: 1.1em;
+				font-weight: 550;
+				font-family: var(--title-font);
+			}
+			ul {
+				padding-inline-start: 1.5em;
+			}
+			li {
+				padding: .25em 0;
+			}
+			a {
+				@include hyperlink($c-1);
+			}
+		}
+		.badges {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 2em;
+			.badge {
+				position: relative;
+				margin: 0 1em;
+				border: 2px solid transparent;
+				transition: all .3s ease-in-out;
+				padding: .5em;
+				border-radius: 3em;
+				height: 3em;
+				width: 3em;
+				cursor: pointer;
+				@media screen and (max-width: 40em) {
+					margin: .5em .25em 2em;
+				}
+				a {
+					border: none;
+					padding: 0;
+					&:before {
+						position: unset;
+					}
+				}
+				&:after {
+					content: attr(data-store);
+					position: absolute;
+					top: 125%;
+					left: 0%;
+					width: 100%;
+					font-size: .7em;
+					text-align: center;
+					opacity: 0;
+					transition: opacity  .3s ease-in-out;
+				}
+				&.ff:after {
+					left: -5%;
+					width: 110%;
+				}
+				&.edge:after {
+					left: -10%;
+					width: 120%;
+				}
+				img {
+					width: 100%;
+				}
+				&:hover {
+					border-color: $c-1;
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 40em) {
+			padding: 1em .25em;
+			&.hidden {
+				border: none;
+			}
+			border-top: 1px solid #EEE;
+			width: initial;
+			.badges {
+				margin-bottom: 1em;
+			}
+		}
+	}
+}

@@ -1,0 +1,97 @@
+.bucket {
+	position: fixed;
+	bottom: 1.5em;
+	right: 1.5em;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	transition: all .3s ease-in-out;
+	transition-delay: .5s;
+	touch-action: none;
+	pointer-events: none;
+	img {
+		touch-action: auto;
+		pointer-events: auto;
+		width: 3em;
+		height: 3em;
+		cursor: pointer;
+		transition: all .3s ease-in-out, filter .5s ease-in-out;
+		border-radius: .5em;
+		flex-shrink: 0;
+		position: relative;
+		z-index: 5;
+	}
+	.bucket-bg {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 3em;
+		height: 3em;
+		z-index: 4;
+		transition: all .3s ease-in-out;
+		background-color: rgba(255,255,255,.75);
+		clip-path: polygon(35% 34%, 39% 76%, 54% 81%, 68% 81%, 82% 78%, 88% 31%, 86% 26%, 76% 23%, 65% 22%, 56% 22%, 48% 22%, 38% 25%, 34% 30%);
+		-webkit-clip-path: polygon(35% 34%, 39% 76%, 54% 81%, 68% 81%, 82% 78%, 88% 31%, 86% 26%, 76% 23%, 65% 22%, 56% 22%, 48% 22%, 38% 25%, 34% 30%);
+	}
+	
+
+	.tooltip {
+		margin-right: .5em;
+		background-color: rgba(255,255,255,.75);
+		opacity: 0;
+		&:before {
+			content: attr(data-hover)
+		}
+		@media (hover:none) {
+			display: none;
+		}
+	}
+	@media (hover:hover) {
+		img:hover ~ .tooltip {
+			opacity: 1;
+		}
+		img:hover, img:hover ~ .bucket-bg {
+			transform: rotate(-35deg);
+		}
+		img:hover ~ .bucket-bg {
+			clip-path: polygon(35% 34%, 39% 76%, 54% 81%, 68% 81%, 82% 78%, 88% 31%, 86% 26%, 76% 23%, 65% 22%, 56% 22%, 48% 22%, 38% 25%, 34% 30%, 24% 38%, 10% 42%, 6% 44%, 5% 47%, 4% 50%, 5% 54%, 7% 56%, 11% 58%, 15% 58%, 19% 56%, 21% 53%, 24% 38%, 34% 30%);
+			-webkit-clip-path: polygon(35% 34%, 39% 76%, 54% 81%, 68% 81%, 82% 78%, 88% 31%, 86% 26%, 76% 23%, 65% 22%, 56% 22%, 48% 22%, 38% 25%, 34% 30%, 24% 38%, 10% 42%, 6% 44%, 5% 47%, 4% 50%, 5% 54%, 7% 56%, 11% 58%, 15% 58%, 19% 56%, 21% 53%, 24% 38%, 34% 30%);
+			background-image: radial-gradient(circle at 0% 50%, var(--nc-0) 30%, $c-t 30%),
+			radial-gradient(circle at 62% -12%, var(--nc-1) 37%, var(--nc-2) 40%, var(--nc-2) 50%, var(--nc-3) 50%, var(--nc-3) 62%, var(--nc-4) 62%);
+		}
+	}
+	&.changing {
+		img, .bucket-bg, img:hover ~ .bucket-bg {
+			transform: rotate(-100deg);
+		}
+		.bucket-bg {
+			clip-path: polygon(35% 34%, 39% 76%, 54% 81%, 68% 81%, 82% 78%, 88% 31%, 86% 26%, 76% 23%, 65% 22%, 56% 22%, 48% 22%, 38% 25%, 34% 30%, 24% 38%, 10% 42%, 6% 44%, 5% 47%, 4% 50%, 5% 54%, 7% 56%, 11% 58%, 15% 58%, 19% 56%, 21% 53%, 24% 38%, 34% 30%);
+			-webkit-clip-path: polygon(35% 34%, 39% 76%, 54% 81%, 68% 81%, 82% 78%, 88% 31%, 86% 26%, 76% 23%, 65% 22%, 56% 22%, 48% 22%, 38% 25%, 34% 30%, 24% 38%, 10% 42%, 6% 44%, 5% 47%, 4% 50%, 5% 54%, 7% 56%, 11% 58%, 15% 58%, 19% 56%, 21% 53%, 24% 38%, 34% 30%);
+			background-image: radial-gradient(circle at 0% 50%, var(--nc-0) 30%, $c-t 30%),
+				radial-gradient(circle at 62% -12%, var(--nc-1) 37%, var(--nc-2) 40%, var(--nc-2) 50%, var(--nc-3) 50%, var(--nc-3) 62%, var(--nc-4) 62%);
+			@media (hover:none) {
+				background-image: radial-gradient(circle at 0% 50%, $c-1 30%, $c-t 30%),
+					radial-gradient(circle at 62% -12%, $c-2 37%, $c-3 40%, $c-3 50%, $c-4 50%, $c-4 62%, $c-5 62%);
+			}
+		}
+		.tooltip {
+			display: block;
+			opacity: 1;
+			&:before {
+				content: attr(data-click);
+			}
+			@media screen and (max-width: 40em) {
+				&:before {
+					content: attr(data-tap);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 56em) {
+		img, .bucket-bg {
+			width: 2.5em;
+			height: 2.5em;
+		}
+	}
+}

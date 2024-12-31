@@ -1,0 +1,100 @@
+#section-container {
+	scroll-behavior: smooth;
+	.section {
+		height: inherit;
+	}
+	.title {
+		font-family: var(--title-font);
+		margin:1em auto 2em;
+		text-align: center;
+		color: var(--text-color);
+		transition: color .5s ease-in-out;
+		font-weight: 600;
+		.text-container {
+			font-size: 2em;
+			font-weight: 750;
+
+			.text-underline {
+				overflow: hidden;
+				transform-origin: left bottom;
+				border-bottom: .25em solid $c-w;
+				margin: 0 auto;
+				&.align-right {
+					margin: unset;
+					margin-left: auto;
+				}
+				&.bg-1 {
+					width: 3.5em;
+					border-color: $c-1;
+				}
+				&.bg-2 {
+					width: 3.5em;
+					border-color: $c-2;
+				}
+				&.bg-3 {
+					width: 4.5em;
+					border-color: $c-3;
+				}
+				&.bg-4 {
+					width: 3.5em;
+					border-color: $c-4;
+				}
+				&.bg-5 {
+					width: 5.25em;
+					border-color: $c-5;
+				}
+				.text {
+					display: block;
+				}
+			}
+		}
+	}
+	.container-width {
+		text-align: unset;
+	}
+	#id-work *::selection {
+		background-color: $c-1;
+	}
+	#id-about *::selection {
+		background-color: $c-5;
+	}
+	.section.is-dark *::selection {
+		color: $c-w;
+	}
+	&.active {
+		@media screen and (min-width: 40em) {
+			height: calc(calc(var(--vh, 1vh) * 100) - 2.813em);
+			.bucket, .sky {
+				bottom: 1em;
+				.tooltip {
+					font-size: .8em;
+				}
+			}
+			.bucket {
+				right: 1em;
+				img, .bucket-bg {
+					width: 2.25em;
+					height: 2.25em;
+				}
+			}
+			.sky {
+				left: 1em;
+				.circle-container {
+					width: 1.67em;
+					height: 1.67em;
+				}
+			}
+		}
+		@media screen and (max-width: 48em) {
+			.bucket, .sky {
+				transition-delay: .5s;
+			}
+			.bucket {
+				right: -3em;	
+			}
+			.sky {
+				left: -3em;	
+			}
+		}
+	}
+}

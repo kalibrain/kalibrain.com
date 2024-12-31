@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+	<meta charset="utf-8">
+	<title>kali yilmaz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="keywords" content="kali, yilmaz, kalibrain, portfolio, developer, software, javascript, python">
+	<meta name="title" content="kali yilmaz">
+	<meta name="description" content="Developer">
+	<meta name="google" content="notranslate">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://kalibrain.com/">
+	<meta property="og:title" content="kali yilmaz">
+	<meta property="og:description" content="Developer">
+	<meta property="og:image" content="/assets/images/og-image.png">
+	<meta name="author" content="kali yilmaz">
+	<link rel="canonical" href="https://kalibrain.com">
+	<link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="kalibrain">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="manifest" href="/assets/favicon/site.webmanifest">
+	<link rel="stylesheet" href="/css/style.min.css">
+</head>	
+<body data-bucket="0">
+	<div id="hero" class="container-width">
+		<h1>
+			<span>
+				<span class="ka">ka</span
+				><span class="li">li</span>
+			</span>
+			<span>
+				<span class="yil">yil</span
+				><span class="maz">maz</span>
+			</span>
+		</h1>	
+	</div>
+	<div id="navigation" data-open="false">
+		<div class="section-nav container-width">
+			<span class="section-title" data-bg-color="1" onclick="navControl('work')">
+				<span data-section-name="work"></span>
+			</span>
+			<span class="section-title" data-bg-color="5" onclick="navControl('about')">
+				<span data-section-name="about"></span>
+			</span>
+		</div>
+	</div>
+	<div id="section-container">
+		<div class="bucket">
+			<img src="/assets/bucket.png" alt="Change colours">
+			<div class="bucket-bg"></div>
+			<div class="tooltip" data-hover="Spill bucket" data-click="I can't believe you've done this" data-tap="Changing colours"></div>
+		</div>
+		<div id="id-work" class="section hidden">
+			<div class="flexbox-grid container-width">
+				<div class="col col-40 sticky">
+					<div class="title">
+						<div class="text-container">
+							<div class="text-underline bg-1 wipe-in-right">
+								<span class="text wipe-in-up">work</span>
+							</div>
+						</div>
+					</div>
+					<div class="divider fade-in delay-1500">
+						<div class="arrow">
+							<span>⌃</span>
+							<span class="delay-50">⌃</span>
+						</div>
+						
+						<div class="work-title fade-in delay-1500">Jobs</div>
+						<div class="work fade-in-right delay-1600" data-work-name="uofm" onclick="workPicker(this.dataset.workName)">
+							<div class="work-name">University of Michigan</div>
+							<div class="subtitle">Ann Arbor, MI</div>
+						</div>
+
+						<div class="work fade-in-right delay-1700" data-work-name="basarsoft" onclick="workPicker(this.dataset.workName)">
+							<div class="work-name">Basarsoft</div>
+							<div class="subtitle">Ankara, Turkiye</div>
+						</div>
+
+						<div class="work fade-in-right delay-1800" data-work-name="innova" onclick="workPicker(this.dataset.workName)">
+							<div class="work-name">Innova</div>
+							<div class="subtitle">Ankara, Turkiye</div>
+						</div>
+						
+						<div class="work-title fade-in delay-1900">Recent Projects</div>
+						<div class="work fade-in-right delay-2000" data-work-name="tacamorg" onclick="workPicker(this.dataset.workName)">
+							<div class="work-name">tacam.org (2024)</div>
+							<div class="subtitle">Non-profit website</div>
+						</div>
+						<div class="work fade-in-right delay-2100" data-work-name="vrdashboard" onclick="workPicker(this.dataset.workName)">
+							<div class="work-name">Post Simulation Dashboard (2025)</div>
+							<div class="subtitle">VR Medical Training Dashboard</div>
+						</div>
+
+
+						<div class="work-title fade-in delay-2200">Startup Participation</div>
+						<div class="work fade-in-right delay-2300" data-work-name="afara" onclick="workPicker(this.dataset.workName)">
+							<div class="work-name">AFARA</div>
+							<div class="subtitle">Cotton Picker Robot</div>
+						</div>
+						<div class="work fade-in-right delay-2400" data-work-name="grizzletech" onclick="workPicker(this.dataset.workName)">
+							<div class="work-name">Grizzle Tech</div>
+							<div class="subtitle">Cybersecurity</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col col-60 work-card-container padding-top padding-left padding-right">
+					
+					<div id="uofm" class="card hidden">
+						<div class="heading">
+							<div><div class="company fade-in-left">University of Michigan - Advanced Genomics Core</div>
+							<div class="position fade-in-left delay-100">Full Stack Developer</div>
+							<div class="dates fade-in-left delay-150">2014 - present</div></div>
+							<div class="logo square fade-in delay-1000">
+								<img data-src="/assets/logos/uofm.png">
+							</div>
+						</div>
+						<div class="blurb fade-in-left delay-1500">
+							<a class="link" target="_blank" href="https://medresearch.umich.edu/office-research/about-office-research/biomedical-research-core-facilities/advanced-genomics-core" rel="noreferrer">
+								University of Michigan Advanced Genomics Core
+							</a> empowers groundbreaking research in genetics and genomics by leveraging advanced technologies and innovative software solutions.
+							<ul>
+								<li class="fade-in-left delay-1600">
+									Designed and developed a robust Laboratory Information Management System (LIMS) to streamline sample tracking, reagent management, and workflow automation.
+								</li>
+								<li class="fade-in-left delay-1700">
+									Transitioned from a legacy Perl-CGI platform to a modern Django-based system, now the sole LIMS solution used in the lab. This transition improved scalability, maintainability, and user satisfaction.
+								</li>
+								<li class="fade-in-left delay-1800">
+									Engineered the Django-based LIMS backend using Python, Django REST Framework, and MySQL, enabling efficient and secure data processing.
+								</li>
+								<li class="fade-in-left delay-1900">
+									Developed an intuitive, responsive front-end using Bootstrap, HTML5, and JavaScript, drastically enhancing the user experience and reducing data entry errors.
+								</li>
+								<li class="fade-in-left delay-2000">
+									Implemented fully automated CI/CD pipelines with GitLab, ensuring faster release cycles, high code quality, and seamless updates.
+								</li>
+								<li class="fade-in-left delay-2100">
+									Integrated with Agilent iLab’s REST APIs to automate service request generation and financial management, boosting operational efficiency.
+								</li>
+								<li class="fade-in-left delay-2200">
+									Migrated database systems from Sybase to Microsoft SQL Server, optimizing performance and ensuring long-term scalability.
+								</li>
+								<li class="fade-in-left delay-2300">
+									Containerized the application with custom Docker images to enable consistent deployments across development and production environments.
+								</li>
+								<li class="fade-in-left delay-2400">
+									Established the Django-based LIMS as a cornerstone of lab operations, eliminating reliance on outdated systems and fostering a seamless workflow for genomic research.
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+
+					<div id="basarsoft" class="card hidden">
+						<div class="heading">
+							<div>
+								<div class="company fade-in-left">Basarsoft</div>
+								<div class="position fade-in-left delay-100">C# Developer</div>
+								<div class="dates fade-in-left delay-150">June 2010 – May 2011</div>
+							</div>
+							<div class="logo square fade-in delay-1000">
+								<img data-src="/assets/logos/basarsoft.png" alt="Basarsoft Logo">
+							</div>
+						</div>
+						<div class="blurb fade-in-left delay-1500">
+							<p>During my time at <a class="link" href="https://www.basarsoft.com.tr/" target="_blank" rel="noreferrer">Basarsoft</a>, I contributed to the development of a Geographic Information System (GIS) application, bringing innovative features to life and showcasing the company’s expertise in GIS technology.</p>
+							<ul>
+								<li class="fade-in-left delay-1600">
+									Designed and developed robust GIS tools using C#.NET, integrating advanced mapping functionalities like locating cities, finding Points of Interest (POI), and adding new geographical data through an intuitive admin panel.
+								</li>
+								<li class="fade-in-left delay-1700">
+									Created thematic maps that dynamically adapted to user demands, enhancing data visualization and user engagement.
+								</li>
+								<li class="fade-in-left delay-1800">
+									Collaborated with cross-functional teams to optimize GIS database performance, employing SQL Server and MapInfo for seamless data management.
+								</li>
+								<li class="fade-in-left delay-1900">
+									Engineered a streamlined user interface and help page, incorporating a built-in video player to guide clients through the application’s capabilities.
+								</li>
+								<li class="fade-in-left delay-2000">
+									Integrated MapBasic with C#.NET classes, enabling a powerful synergy between mapping technologies and custom functionalities.
+								</li>
+								<li class="fade-in-left delay-2100">
+									Championed quality control initiatives, ensuring data integrity and consistency across newly acquired GIS datasets.
+								</li>
+								<li class="fade-in-left delay-2200">
+									Mentored interns on GIS environment setup and foundational application development, fostering a culture of knowledge sharing and technical growth.
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div id="innova" class="card hidden">
+						<div class="heading">
+							<div>
+								<div class="company fade-in-left">Innova</div>
+								<div class="position fade-in-left delay-100">Android Application Developer</div>
+								<div class="dates fade-in-left delay-150">May 2009 – May 2010</div>
+							</div>
+							<div class="logo square fade-in delay-1000">
+								<img data-src="/assets/logos/innova.jpg" alt="Innova Logo">
+							</div>
+						</div>
+						<div class="blurb fade-in-left delay-1500">
+							<p>At <a class="link" href="https://www.innova.com.tr/" target="_blank" rel="noreferrer">Innova</a>, I worked on a patient-focused Android application that transformed clinic operations and patient engagement.</p>
+							<ul>
+								<li class="fade-in-left delay-1600">
+									Designed intuitive surveys to collect patient feedback and preferences.
+								</li>
+								<li class="fade-in-left delay-1700">
+									Implemented SQLite for secure and efficient local data storage.
+								</li>
+								<li class="fade-in-left delay-1800">
+									Enhanced user experience with interactive menus and calendar integration.
+								</li>
+								<li class="fade-in-left delay-1900">
+									Developed admin tools for customizable survey creation.
+								</li>
+								<li class="fade-in-left delay-2000">
+									Ensured app reliability through rigorous testing on emulators and devices.
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div id="tacamorg" class="card hidden">
+						<div class="heading fade-in-left">
+							<div><div class="company fade-in-left">tacam.org</div>
+							<div class="dates fade-in-left delay-100">2024</div></div>
+							<div class="logo fade-in delay-1000">
+								<img data-src="/assets/logos/tacam.png">
+							</div>
+						</div>
+						<div class="blurb fade-in-left delay-1500">
+							<a class="link" target="_blank" href="https://tacam.org" target="_blank" rel="noreferrer">
+								TACAM Website Revamp Project
+							</a> involved modernizing a 15-year-old WordPress-based website for a nonprofit organization, transforming it into a more secure, accessible, and user-friendly platform.
+							<ul>
+								<li class="fade-in-left delay-1600">
+									Collaborated with stakeholders to gather feedback and ensure the new website aligns with the organization’s mission and audience needs.
+								</li>
+								<li class="fade-in-left delay-1700">
+									Migrated all existing content to a modern and secure WordPress template, preserving organizational history while improving structure and design.
+								</li>
+								<li class="fade-in-left delay-1800">
+									Enhanced accessibility by implementing WCAG-compliant standards, ensuring inclusivity for a diverse audience.
+								</li>
+								<li class="fade-in-left delay-1900">
+									Made the website mobile-friendly by optimizing layouts and elements for seamless performance across devices.
+								</li>
+								<li class="fade-in-left delay-2000">
+									Improved security with the latest WordPress best practices and updated plugins, protecting against vulnerabilities.
+								</li>
+								<li class="fade-in-left delay-2100">
+									Delivered an intuitive and aesthetically pleasing design, creating an engaging user experience for donors, volunteers, and visitors.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div id="vrdashboard" class="card hidden">
+						<div class="heading">
+							<div>
+								<div class="company fade-in-left">Freelancing</div>
+								<div class="project-title fade-in-left">VR Post Simulation Dashboard</div>
+								<div class="tech-stack fade-in-left delay-100">Next.js, React</div>
+								<div class="dates fade-in-left delay-150">2024</div>
+							</div>
+						</div>
+						<div class="blurb fade-in-left delay-1500">
+							<p>The <a class="link" href="https://mteam-dashboard.vercel.app/" target="_blank" rel="noreferrer">VR Post Simulation Dashboard</a> is a sophisticated tool designed to analyze and visualize trainee performance data from virtual reality simulations, enhancing training effectiveness and operational efficiency.</p>
+							<ul>
+								<li class="fade-in-left delay-1600">
+									<strong>Purpose:</strong> Addressed the need for a comprehensive system to evaluate trainee actions after VR simulation sessions to facilitate critical reflection and performance improvement.
+								</li>
+								<li class="fade-in-left delay-1700">
+									<strong>Development:</strong> Engineered a dashboard using Next.js and React, featuring an Actions Scatter Plot to depict trainee actions, CPR intervals, and stage errors.
+								</li>
+								<li class="fade-in-left delay-1800">
+									<strong>Data Parsing:</strong> Implemented complex csv and json parsing to process simulation data, utilizing JavaScript libraries to handle time-stamped events and stage transitions.
+								</li>
+								<li class="fade-in-left delay-1900">
+									<strong>Data Visualization:</strong> Leveraged Plotly.js to create visualizations, including labeled vertical bands representing stages and horizontal lines indicating CPR periods.
+								</li>
+								<li class="fade-in-left delay-2000">
+									<strong>Automated Testing:</strong> Developed integration tests with date-handling scripts to ensure consistent and accurate data parsing across different days, maintaining high code quality.
+								</li>
+								<li class="fade-in-left delay-2100">
+									<strong>Benefits:</strong> Enabled trainers to identify correct and erroneous actions, assess timing accuracy, and detect missed actions, thereby improving training outcomes and decision-making processes.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div id="afara" class="card hidden">
+						<div class="heading">
+							<div>
+								<div class="company fade-in-left">AFARA</div>
+								<div class="position fade-in-left delay-100">Business Development Lead</div>
+								<div class="dates fade-in-left delay-150">2020 – Present</div>
+							</div>
+							<div class="logo square fade-in delay-1000">
+								<img data-src="/assets/logos/afara.png" alt="AFARA Logo">
+							</div>
+						</div>
+						<div class="blurb fade-in-left delay-1500">
+							<p>As the <strong>Business Development Lead</strong> at <a class="link" href="https://afara.com.tr/" target="_blank" rel="noreferrer">AFARA</a>, I have been deeply involved in advancing our cotton picker robot from inception to global recognition.</p>
+							<ul>
+								<li class="fade-in-left delay-1700">
+									Represented AFARA at prestigious global events like <strong>CES in Las Vegas</strong>, <strong>Take Off in Istanbul</strong>, <strong>FIRA</strong> in France, and in Salinas, California, promoting our innovation to international audiences.
+								</li>
+								<li class="fade-in-left delay-1800">
+									Closely worked with company founder, Omer Muratli, to strategize growth opportunities and identify focus areas for the next phase of development in the agricultural sector.
+								</li>
+								<li class="fade-in-left delay-1900">
+									Learned and contributed to essential business strategies, bridging gaps between technical innovation and market needs, and enhancing my understanding of business development.
+								</li>
+								<li class="fade-in-left delay-2000">
+									Facilitated connections with stakeholders, investors, and agricultural experts, fostering partnerships that align with AFARA’s mission.
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					<div id="grizzletech" class="card hidden">
+						<div class="heading">
+							<div>
+								<div class="company fade-in-left">Grizzle Tech</div>
+								<div class="position fade-in-left delay-100">Business Development Lead</div>
+								<div class="dates fade-in-left delay-150">2023 – Present</div>
+							</div>
+							<div class="logo square fade-in delay-1000">
+								<img data-src="/assets/logos/grizzle-tech.jpg" alt="Grizzle Tech Logo">
+							</div>
+						</div>
+						<div class="blurb fade-in-left delay-1500">
+							<p>As the <strong>Business Development Lead</strong> at <a class="link" href="https://grizzletech.com/" target="_blank" rel="noreferrer">Grizzle Tech</a>, I contribute to our cutting-edge application, <strong>ZT-PAM</strong>.</p>
+							<ul>
+								<li class="fade-in-left delay-1600">
+									Spearheaded outreach efforts to establish Grizzle Tech’s presence in global markets, representing the company at international events and fostering relationships.
+								</li>
+								<li class="fade-in-left delay-1700">
+									Leveraged my technical expertise to align the <strong>ZT-PAM</strong> product with industry needs, enhancing its appeal to potential clients and stakeholders.
+								</li>
+								<li class="fade-in-left delay-1800">
+									Collaborated with founders and engineers to identify strategic growth opportunities and refine the product roadmap for long-term success.
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+
+				</div>
+			</div>
+		</div>
+		<div id="id-about" class="section hidden">
+			<div class="flexbox-grid container-width">
+				<div class="col col-60">
+					<div class="title hide-on-desktop">
+						<div class="text-container">
+							<div class="text-underline bg-5 wipe-in-right">
+								<span class="text wipe-in-up">about me</span>
+							</div>
+						</div>
+					</div>
+					<div class="about-blurb info-container info">
+						<p class="fade-in-right delay-1500">Hi there! 👋</p>
+						<p class="fade-in-right delay-1600">I’m Kali, a software developer with a passion for making life (and work) a little easier—one line of code at a time. Thanks for stopping by my corner of the internet!</p>
+						<p class="fade-in-right delay-1700">By day, I live in the lovely city of Ann Arbor, Michigan, where I work at the University of Michigan’s Advanced Genomics Core. What do I do there? Glad you asked! I build and improve a software called LIMS (Laboratory Information Management System). Think of it as a supercharged digital assistant for our brilliant lab technicians, helping them decode the mysteries of DNA, cells, and everything in between. Pretty cool, right?</p>
+						<p class="fade-in-right delay-1800">Originally from Turkiye, I brought my love for technology to the U.S., earning a Computer Science degree at SUNY Binghamton. Since then, I've been proud to call myself a Wolverine—contributing to U-M’s innovative spirit.</p>
+						<p class="fade-in-right delay-1900">Outside of work, I’m a big believer in giving back. Whether it’s helping organizations or tinkering with side projects, I love putting my skills to good use. Curious about what else I’ve been up to? Head over to my work page to explore!
+					</div>
+				</div>
+				<div class="col col-40 sticky">
+					<div class="title hide-on-mobile completely">
+						<div class="text-container">
+							<div class="text-underline align-right bg-5 wipe-in-right">
+								<span class="text wipe-in-up">about me</span>
+							</div>
+						</div>
+					</div>
+					<div class="me fade-in-left delay-2500">
+						<img id="me-jpg" data-src="/assets/me.jpg">
+					</div>
+					<div class="social">
+						<h2 class="fade-in-left delay-2600"><span>@</span>kalibrain</h2>
+						<div>
+							<span class="fade-in-left delay-2700">
+								<a class="link" href="mailto:mail@kalibrain.com?subject=Hello!" data-name="email" target="_blank">email</a>
+							</span>
+							<span class="fade-in-left delay-2800">
+								<a class="link" href="https://instagram.com/kalibrain" target="_blank" rel="noreferrer">instagram</a>
+							</span>
+							<span class="fade-in-left delay-2900">
+								<a class="link" href="https://twitter.com/kalibrain" target="_blank" rel="noreferrer">twitter</a>
+							</span>
+						</div>
+						<div>
+							<span class="fade-in-left delay-3000">
+								<a class="link" href="https://github.com/kalibrain" target="_blank" rel="noreferrer">github</a>
+							</span>
+							<span class="fade-in-left delay-3100">
+								<a class="link" href="https://linkedin.com/in/kerimyilmaz" target="_blank" rel="noreferrer">linkedin</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sky">
+			<div class="circle-container">
+				<div class="circle" onclick="darkMode()"></div>
+			</div>
+			<div class="tooltip" data-hover-dark="Goodnight" data-hover-light="Rise and shine"></div>
+		</div>
+	</div>
+	<script src="/js/script.terser.js"></script>
+</body>
+</html>

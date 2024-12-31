@@ -1,0 +1,89 @@
+html.dark-mode{
+	--text-color: #fff;
+	--bg-color: #2d2d2d;
+	color: var(--text-color);
+	background-color: var(--bg-color);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23eee' fill-opacity='.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+
+	a:hover {
+		color: $c-b;
+	}
+
+	.tooltip, .bucket-bg {
+		background-color: rgba(45,45,45,.75);
+	}
+	.sky {
+		.circle {
+			background-position: 25% 100%;
+			transform: rotate(-180deg);
+			&:hover {
+				background-position: 50% 100%;
+			}
+		}
+		.tooltip:before {
+			content: attr(data-hover-light);
+		}
+	}
+	.divider {
+		border-color: #3f3f3f;
+	}
+
+	.bucket img, #id-maps .latest-container img {
+		filter: invert(1);
+	}
+	#id-maps .control > input:not(:checked) ~ label:hover:before {
+		border-color: $c-4;
+	}
+}
+
+// darkmode button
+.sky {
+	position: fixed;
+	bottom: 1.5em;
+	left: 1.5em;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	transition: all .3s ease-in-out;
+	transition-delay: .5s;
+	touch-action: none;
+	pointer-events: none;
+	.circle-container {
+		height: 2em;
+		width: 2em;
+		touch-action: auto;
+		pointer-events: auto;
+		cursor: pointer;
+		transition: all .3s ease-in-out;
+		.circle {
+			padding: 12.5%;
+			height: 100%;
+			width: 100%;
+			box-sizing: border-box;
+			border: 2px solid var(--text-color);
+			border-radius: 50%;
+			background-image: linear-gradient(90deg, $c-d, $c-d 50%, $c-w 50%);
+			background-size: 200% 100%;
+			background-position: 125% 100%;
+			transition: all .3s ease-in-out, transform .5s ease-in-out;
+			opacity: .75;
+			&:hover {
+				background-position: 150% 100%;
+				opacity: 1; 
+			}
+		}
+		@media screen and (max-width: 56em) {
+			width: 1.67em;
+			height: 1.67em;
+		}
+	}
+	.tooltip {
+		margin-left: .25em;
+		&:before {
+			content: attr(data-hover-dark);
+		}
+	}
+	.circle-container:hover ~ .tooltip {
+		opacity: 1;
+	}
+}

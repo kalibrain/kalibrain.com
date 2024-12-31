@@ -1,0 +1,28 @@
+
+// Fixed colours
+$c-w: #fff;
+$c-b: #000;
+$c-d: #2d2d2d;
+$c-t: rgba(0,0,0,0);
+
+// Dynamic colours
+:root {
+	--c-0: #fff;
+	--c-1: #fff;
+	--c-2: #fff;
+	--c-3: #fff;
+	--c-4: #fff;
+	--text-color: #000;
+	--bg-color: #fff;
+	--title-font: 'Outfit';
+	--body-font: 'Switzer';
+}
+
+// These variables are set using JS
+$c-1: var(--c-0);
+$c-2: var(--c-1);
+$c-3: var(--c-2);
+$c-4: var(--c-3);
+$c-5: var(--c-4);
+
+$ease-in-out-cubic: cubic-bezier(.65, 0, .35, 1);
